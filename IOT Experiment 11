@@ -1,0 +1,57 @@
+Experiment No.: 11
+
+Title
+
+Interfacing Potentiometer with LCD Display
+
+Aim
+
+To display potentiometer values on a 16×2 LCD using Arduino.
+
+Theory
+
+LCD displays are used to show output information. Arduino reads the analog value from the potentiometer and displays it on the LCD.
+
+Components Required
+Arduino Uno
+16×2 LCD Display
+Potentiometer
+Jumper Wires
+Procedure
+Connect LCD pins with Arduino.
+Connect potentiometer output to analog pin A0.
+Include LCD library.
+Upload the program.
+Rotate the potentiometer.
+Observe values on LCD.
+Code
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(12,11,5,4,3,2);
+
+void setup()
+{
+  lcd.begin(16,2);
+}
+
+void loop()
+{
+  int value = analogRead(A0);
+
+  lcd.clear();
+  lcd.print("Value:");
+  lcd.print(value);
+
+  delay(500);
+}
+Output
+
+LCD displays potentiometer values.
+
+Result
+
+Potentiometer values were successfully displayed on LCD.
+
+Conclusion
+
+Interfacing of potentiometer with LCD was successfully performed.
