@@ -1,53 +1,64 @@
-Experiment No.: 2
-Title
+# Experiment No.: 2
 
-Demonstration of setup() and loop() Functions
+## Title
 
-Aim
+**Write an Arduino Program to Demonstrate `setup()` and `loop()` Functions**
 
-To demonstrate the working of setup() and loop() functions in Arduino.
+### Aim
 
-Theory
+To understand the working of the `setup()` and `loop()` functions in an Arduino program.
 
-In Arduino programming, the setup() function is executed only once when the Arduino board starts or resets. It is used for initialization tasks such as setting pin modes and starting communication. The loop() function runs continuously after the setup() function and contains the main program instructions.
+### Theory
 
-Components Required
-Arduino Uno
-USB Cable
-Computer/Laptop
-Procedure
-Connect the Arduino Uno to the computer using a USB cable.
-Open the Arduino IDE.
-Select Arduino Uno board and appropriate COM port.
-Write the program using setup() and loop() functions.
-Compile the program to check for errors.
-Upload the program to Arduino Uno.
-Open the Serial Monitor.
-Observe the output messages.
-Code
-void setup()
-{
-  Serial.begin(9600);
-  Serial.println("Setup executed once");
+Every Arduino program consists of two main functions:
+
+* **`setup()`**: Executes only once when the Arduino board is powered on or reset. It is used to initialize pins, variables, and communication settings.
+* **`loop()`**: Executes repeatedly after `setup()`. It contains the main code that runs continuously.
+
+### Components Required
+
+* Arduino Uno
+* USB Cable
+* LED
+* 220 Ω Resistor
+* Breadboard
+* Jumper Wires
+
+### Circuit Diagram
+
+Connect the LED to **Digital Pin 13** through a **220 Ω resistor**, and connect the other terminal of the LED to **GND**.
+
+### Program
+
+```cpp
+void setup() {
+  pinMode(13, OUTPUT);
 }
 
-void loop()
-{
-  Serial.println("Loop running...");
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
   delay(1000);
 }
-Output
+```
 
-The Serial Monitor displays:
+### Explanation
 
-Setup executed once
-Loop running...
-Loop running...
-Loop running...
-Result
+* `pinMode(13, OUTPUT);` sets pin 13 as an output pin.
+* `digitalWrite(13, HIGH);` turns the LED ON.
+* `delay(1000);` waits for 1 second.
+* `digitalWrite(13, LOW);` turns the LED OFF.
+* The `loop()` function repeats these steps continuously, causing the LED to blink.
 
-The setup() and loop() functions were successfully demonstrated.
+### Output
 
-Conclusion
+The LED connected to digital pin 13 blinks continuously, turning ON for 1 second and OFF for 1 second.
 
-The working of Arduino setup() and loop() functions was studied successfully. It was observed that setup() executes once, while loop() executes repeatedly.
+### Result
+
+The `setup()` function was executed once to initialize the output pin, and the `loop()` function executed continuously to blink the LED successfully.
+
+### Conclusion
+
+The experiment was performed successfully. It demonstrated that the `setup()` function runs only once during startup, while the `loop()` function runs repeatedly, making it suitable for continuous tasks in Arduino applications.
