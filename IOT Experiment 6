@@ -1,0 +1,55 @@
+Experiment No.: 6
+
+Title
+
+Demonstration of Digital I/O Functions
+
+Aim
+
+To demonstrate digital input and output functions of Arduino.
+
+Theory
+
+Digital pins of Arduino can be configured as INPUT or OUTPUT. Digital input reads signals from sensors or switches, while digital output controls devices like LEDs.
+
+Components Required
+Arduino Uno
+LED
+Push Button
+220Ω Resistor
+Breadboard
+Jumper Wires
+Procedure
+Connect LED to digital pin 13.
+Connect push button to digital pin 2.
+Set LED as OUTPUT and button as INPUT.
+Upload the program.
+Press the button and observe LED operation.
+Code
+int led = 13;
+int button = 2;
+
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(button, INPUT_PULLUP);
+}
+
+void loop()
+{
+  if(digitalRead(button)==LOW)
+    digitalWrite(led,HIGH);
+  else
+    digitalWrite(led,LOW);
+}
+Output
+
+LED turns ON when the button is pressed.
+
+Result
+
+Digital input and output functions were demonstrated successfully.
+
+Conclusion
+
+Arduino digital I/O operations were studied successfully.
