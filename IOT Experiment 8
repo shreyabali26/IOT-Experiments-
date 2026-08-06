@@ -1,0 +1,59 @@
+Experiment No.: 8
+
+Title
+
+Demonstration of Interrupts in Arduino
+
+Aim
+
+To demonstrate hardware interrupts using Arduino.
+
+Theory
+
+Interrupts allow Arduino to respond immediately to external events without continuously checking the input condition.
+
+Components Required
+Arduino Uno
+Push Button
+Jumper Wires
+Procedure
+Connect push button to interrupt pin 2.
+Write interrupt service routine.
+Upload the program.
+Press the button.
+Observe interrupt count.
+Code
+volatile int count=0;
+
+void interruptFunction()
+{
+  count++;
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(2,INPUT_PULLUP);
+
+  attachInterrupt(
+  digitalPinToInterrupt(2),
+  interruptFunction,
+  FALLING);
+}
+
+void loop()
+{
+  Serial.println(count);
+  delay(1000);
+}
+Output
+
+Interrupt count increases when the button is pressed.
+
+Result
+
+Interrupt functionality was successfully demonstrated.
+
+Conclusion
+
+Arduino interrupt operation was studied successfully.
