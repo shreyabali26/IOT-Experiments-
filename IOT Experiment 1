@@ -1,0 +1,42 @@
+# Experiment No.: 1
+
+## Title
+
+**Introduction to Arduino IDE**
+
+## Aim
+
+To study the Arduino IDE and understand its features.
+
+## Theory
+
+Arduino IDE (Integrated Development Environment) is software used to write, compile, and upload programs to Arduino boards. It provides a code editor, compiler, Serial Monitor, and library support, making it easy to develop and test Arduino applications.
+
+## Components Required
+
+* Arduino Uno
+* USB Cable
+* Computer/Laptop
+
+## Procedure
+
+1. Install the Arduino IDE.
+2. Connect the Arduino Uno to the computer using a USB cable.
+3. Open the Arduino IDE.
+4. Select the correct **Board** and **COM Port** from the **Tools** menu.
+5. Write or open a sample Arduino program.
+6. Compile the program to check for errors.
+7. Upload the program to the Arduino Uno.
+8. Observe the successful upload message.
+
+## Output
+
+The Arduino IDE successfully compiles and uploads the program to the Arduino Uno board.
+
+## Result
+
+The Arduino IDE was installed successfully, and a sample program was compiled and uploaded to the Arduino Uno.
+
+## Conclusion
+
+The Arduino IDE was studied successfully. The installation, compilation, and uploading process was understood, and the Arduino Uno board was programmed successfully using the Arduino IDE.
