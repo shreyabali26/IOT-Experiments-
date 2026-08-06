@@ -1,0 +1,48 @@
+Experiment No.: 5
+
+Title
+
+Demonstration of Strings in Arduino
+
+Aim
+
+To demonstrate String operations in Arduino.
+
+Theory
+
+Strings are used to store and manipulate text data. Arduino provides String functions such as length(), concatenation, and comparison.
+
+Components Required
+Arduino Uno
+USB Cable
+Computer/Laptop
+Procedure
+Connect Arduino Uno to the computer.
+Open Arduino IDE.
+Create a String variable.
+Display the string using Serial Monitor.
+Upload and execute the program.
+Code
+String name = "Arduino";
+
+void setup()
+{
+  Serial.begin(9600);
+
+  Serial.println(name);
+  Serial.println(name.length());
+}
+
+void loop()
+{
+}
+Output
+Arduino
+7
+Result
+
+String operations were successfully demonstrated.
+
+Conclusion
+
+The use of String data type in Arduino was studied successfully.
