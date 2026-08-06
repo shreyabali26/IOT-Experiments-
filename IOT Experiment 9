@@ -1,0 +1,54 @@
+Experiment No.: 9
+
+Title
+
+Demonstration of I2C Communication Protocol
+
+Aim
+
+To demonstrate I2C communication between Arduino devices.
+
+Theory
+
+I2C (Inter-Integrated Circuit) is a serial communication protocol that uses two wires: SDA (Serial Data) and SCL (Serial Clock). It allows multiple devices to communicate using the same bus.
+
+Components Required
+Arduino Uno
+Jumper Wires
+USB Cable
+Computer/Laptop
+Procedure
+Connect Arduino Uno to the computer.
+Connect SDA and SCL pins for I2C communication.
+Include the Wire library in the program.
+Upload the program.
+Observe the data transmission.
+Code
+#include <Wire.h>
+
+void setup()
+{
+  Wire.begin();
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  Wire.beginTransmission(8);
+  Wire.write("Hello");
+  Wire.endTransmission();
+
+  Serial.println("Data Sent");
+  delay(1000);
+}
+Output
+Data Sent
+Data Sent
+Data Sent
+Result
+
+I2C communication was successfully demonstrated.
+
+Conclusion
+
+The I2C communication protocol and data transmission process were studied successfully.
