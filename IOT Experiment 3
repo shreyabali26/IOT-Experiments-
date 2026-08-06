@@ -1,0 +1,58 @@
+Experiment No.: 3
+Title
+
+Demonstration of Arduino Data Types
+
+Aim
+
+To demonstrate different data types used in Arduino programming.
+
+Theory
+
+Arduino supports different data types such as integer, float, character, and boolean. These data types are used to store different types of values in a program.
+
+Components Required
+Arduino Uno
+USB Cable
+Computer/Laptop
+Procedure
+Connect Arduino Uno to the computer.
+Open Arduino IDE.
+Declare variables using different data types.
+Display the values using Serial Monitor.
+Compile and upload the program.
+Observe the displayed output.
+Code
+int number = 100;
+float temperature = 36.5;
+char grade = 'A';
+bool status = true;
+
+void setup()
+{
+  Serial.begin(9600);
+
+  Serial.println(number);
+  Serial.println(temperature);
+  Serial.println(grade);
+  Serial.println(status);
+}
+
+void loop()
+{
+}
+Output
+
+Serial Monitor displays:
+
+100
+36.5
+A
+1
+Result
+
+Different Arduino data types were successfully demonstrated.
+
+Conclusion
+
+Various Arduino data types were studied and their values were displayed successfully using Serial Monitor.
